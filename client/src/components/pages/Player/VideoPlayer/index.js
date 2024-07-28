@@ -8,7 +8,7 @@ const VideoPlayer = () => {
   return (
     <div>
       <video
-        src={`http://localhost:5000/video/${id}`}
+        src={`/video/${id}`}
         width="100%"
         height="720px"
         controls
