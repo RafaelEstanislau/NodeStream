@@ -71,6 +71,11 @@ app.get('/', (req: Request, res: Response) => {
   res.sendFile(indexPath);
 });
 
+app.get("*", (req: Request, res: Response) => {
+  const indexPath = path.join(__dirname, '../../client/build/index.html');
+  res.sendFile(indexPath);
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
